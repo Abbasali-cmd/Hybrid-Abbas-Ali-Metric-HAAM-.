@@ -40,23 +40,3 @@ Abbas_Ali_Distance <- function(x, y, num_indices, cat_indices, feature_weights, 
 }
 
 
-# Load required libraries
-library(class)
-library(e1071)
-library(xgboost)
-library(randomForest)
-library(ggplot2)
-library(caret)
-
-# Define HAAM Function
-Abbas_Ali_Distance <- function(x, y, num_indices, cat_indices, feature_weights, std_devs, transformation = "log") {
-  if (transformation == "sqrt") {
-    num_distance <- sum((feature_weights / std_devs) * sqrt(1 + abs(x[num_indices] - y[num_indices])))
-  } else if (transformation == "tanh") {
-    num_distance <- sum((feature_weights / std_devs) * tanh(abs(x[num_indices] - y[num_indices])))
-  } else {
-    num_distance <- sum((feature_weights / std_devs) * log1p(abs(x[num_indices] - y[num_indices])))
-  }
-  cat_distance <- sum(x[cat_indices] != y[cat_indices]) / length(cat_indices)
-  return(num_distance + cat_distance)
-}
