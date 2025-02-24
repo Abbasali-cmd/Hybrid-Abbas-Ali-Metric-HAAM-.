@@ -1,9 +1,13 @@
 
 
-
 # Hybrid Abbas Ali Metric (HAAM)
 
 Hybrid Abbas Ali Metric (HAAM) is a custom distance metric designed to improve KNN classification accuracy, especially for mixed datasets containing both numerical and categorical features.
+
+📌 **GitHub Repository:**  
+🔗 [Hybrid Abbas Ali Metric (HAAM)](https://github.com/Abbasali-cmd/Hybrid-Abbas-Ali-Metric-HAAM-)
+
+---
 
 ## ✨ Features
 - Uses **log transformation** for numerical features to reduce outlier impact.
@@ -12,8 +16,12 @@ Hybrid Abbas Ali Metric (HAAM) is a custom distance metric designed to improve K
 - Works well for **imbalanced datasets**.
 - Can be used with **KNN, SVM, and XGBoost** classifiers.
 
+---
+
 ## 📌 Installation
 
+```bash
+git clone https://github.com/Abbasali-cmd/Hybrid-Abbas-Ali-Metric-HAAM-.git
 
 
 install.packages(c("class", "e1071", "xgboost", "randomForest", "ggplot2", "caret"))
@@ -26,8 +34,6 @@ library(randomForest)
 library(ggplot2)
 library(caret)
 
-
-# 📌 Hybrid Abbas Ali Metric (HAAM) Function
 HAAM_Distance <- function(x, y, num_indices, cat_indices, feature_weights, std_devs, transformation = "log") {
   
   # Apply the selected transformation to numerical features
@@ -45,6 +51,13 @@ HAAM_Distance <- function(x, y, num_indices, cat_indices, feature_weights, std_d
   # Return the combined distance
   return(num_distance + cat_distance)
 }
+
+
+git add README.md
+git commit -m "Updated README with GitHub link"
+git push origin main
+
+
 
 
 
