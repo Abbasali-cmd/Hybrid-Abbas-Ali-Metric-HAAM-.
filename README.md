@@ -53,10 +53,6 @@ HAAM_Distance <- function(x, y, num_indices, cat_indices, feature_weights, std_d
 }
 
 
-git add README.md
-git commit -m "Updated README with GitHub link"
-git push origin main
-
 
 
 
