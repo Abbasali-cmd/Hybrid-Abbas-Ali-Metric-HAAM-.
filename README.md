@@ -23,6 +23,7 @@ Hybrid Abbas Ali Metric (HAAM) is a custom distance metric designed to improve K
 ```bash
 git clone https://github.com/Abbasali-cmd/Hybrid-Abbas-Ali-Metric-HAAM-.git
 
+<meta name="google-site-verification" content="TkhbvZkQuqfOxXK-B-l9JGJXoIhBrLf4Eg4Pa6ry4aY" />
 
 install.packages(c("class", "e1071", "xgboost", "randomForest", "ggplot2", "caret"))
 
